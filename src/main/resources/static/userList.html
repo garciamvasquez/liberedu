@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="userList.css">
+</head>
+
+<body>
+<h1>Lista de Usuarios</h1>
+
+<button id="btnFindUser" class="btnUserList">Consultar usuarios</button>
+<button id="btnAddUser" class="btnUserList">Agregar usuario</button>
+<button id="btnDeleteUser" class="btnUserList">Borrar usuario</button>
+
+<div class="form-container" id="add-user-form-container">
+    <h2>Agregar Nuevo Usuario</h2>
+    <form id="add-user-form">
+        <input type="text" id="idcard" name="idcard" placeholder="Identificación" required>
+        <input type="text" id="firstname" name="firstname" placeholder="Nombre" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Apellido" required>
+        <input type="email" id="email" name="email" placeholder="Correo" required>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        <input type="number" id="roleId" name="roleId" placeholder="ID del Rol" required>
+        <button type="submit">Agregar</button>
+    </form>
+</div>
+
+<!-- ############### UPDATED ############### -->
+<div class="form-container" id="delete-user-form-container">
+    <h2>Eliminar Usuario</h2>
+    <form id="delete-user-form">
+        <input type="number" id="user-id" name="user-id" placeholder="ID del Usuario" required>
+        <button type="submit">Eliminar</button>
+    </form>
+</div>
+<!-- ############### UPDATED ############### -->
+
+<table id="usersTable">
+    <tr>
+        <th>Usuario</th>
+        <th>Rol</th>
+        <th>Identificación</th>
+        <th>Correo</th>
+    </tr>
+</table>
+<script src="userList.js"></script>
+</body>
+</html>
+
